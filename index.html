@@ -1,31 +1,153 @@
 <!doctype html>
 <html lang="pl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Bajkowe Animacje - animacje dla dzieci w Lublinie i okolicach. Urodziny, wesela, festyny, przedszkola, bańki mydlane i piana party.">
-<title>Bajkowe Animacje | Lublin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Zaplanuj wyjątkową zabawę dla swojego dziecka! Bajkowe Animacje dla dzieci w Lublinie i okolicach: urodziny, bańki mydlane, malowanie twarzy, balony i animacje na każdą okazję.">
+<meta name="theme-color" content="#fff8ef">
+<title>Bajkowe Animacje Lublin | Wyjątkowa zabawa dla dzieci</title>
 <style>
-:root{--blue:#0877bd;--pink:#ef559b;--navy:#153b68;--pale:#eff9ff;--ink:#29445f}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.top{background:#0755a5;color:white;text-align:center;padding:9px;font-size:14px}.nav{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(12px);z-index:3;border-bottom:1px solid #e5eff7}.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:9px;font-weight:950;font-size:20px;color:var(--navy)}.brand-mark{width:46px;height:46px;object-fit:cover;border-radius:50%;border:2px solid white;box-shadow:0 2px 8px #153b6830}.logo span{color:var(--pink)}nav{display:flex;gap:22px;font-weight:700;font-size:14px}.btn{display:inline-block;padding:13px 21px;border-radius:30px;background:var(--pink);color:white;font-weight:800}.btn.blue{background:var(--blue)}.hero{background:linear-gradient(125deg,#ddf5ff,#fdf0f8);padding:80px 0}.heroGrid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.tag{color:var(--blue);font-weight:850;text-transform:uppercase;letter-spacing:1px;font-size:12px}h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-2px;color:var(--navy);margin:15px 0}h1 em{font-style:normal;color:var(--pink)}.lead{font-size:18px;line-height:1.7}.photo,.placeholder{height:390px;width:100%;object-fit:cover;border-radius:34px;box-shadow:0 18px 50px #174b7022}.placeholder{background:radial-gradient(circle at 30% 30%,#fff 0 6%,transparent 7%),radial-gradient(circle at 70% 60%,#fff9 0 10%,transparent 11%),linear-gradient(135deg,#8edcf7,#f8b9d8);display:grid;place-items:center;font-size:90px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}section{padding:75px 0}.head{text-align:center;max-width:720px;margin:0 auto 38px}.head h2{font-size:clamp(30px,4vw,44px);color:var(--navy);margin:10px 0}.head p{line-height:1.7;color:#64798c}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;border-radius:22px;background:var(--pale);border:1px solid #e1eff8}.card:nth-child(3n+2){background:#fff2f8}.card:nth-child(3n){background:#fff9e9}.ico{font-size:30px}.card h3{color:var(--navy);margin:12px 0 8px}.card p{line-height:1.65;font-size:14px;margin:0}.band{background:linear-gradient(120deg,#0755a5,#159bd4);color:white}.band h2{font-size:38px;margin:10px 0}.band p{line-height:1.8}.chips{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}.chips span{background:#ffffff20;padding:13px;border-radius:12px;font-weight:750}.gallery{background:#f4faff}.galleryGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tile{height:180px;border-radius:18px;background:linear-gradient(135deg,#b8eaff,#f8c6df);display:grid;place-items:center;font-size:42px;overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover}.why{background:#fff7fb}.contact{background:linear-gradient(120deg,#fff0f7,#eaf8ff)}.contactBox{background:white;padding:35px;border-radius:28px;box-shadow:0 15px 45px #174b7018;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.contactBox h2{color:var(--navy);margin-top:0}.contactBox p{line-height:1.9}footer{background:#10365f;color:#dceeff;padding:35px 0;text-align:center;line-height:1.9}
-@media(max-width:760px){nav{display:none}.hero{padding:50px 0}.heroGrid{grid-template-columns:1fr;gap:25px}.photo,.placeholder{height:280px}.cards{grid-template-columns:1fr}.galleryGrid{grid-template-columns:repeat(2,1fr)}.tile{height:140px}.contactBox{padding:25px}}
+:root{--navy:#153b68;--blue:#0877bd;--sky:#dff5ff;--pink:#ef559b;--pink-dark:#d94087;--yellow:#ffd857;--ink:#29445f;--muted:#61788d;--cream:#fff8ef;--lilac:#f5edff;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fffdfb}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+.top{background:var(--navy);color:#fff;text-align:center;padding:10px 14px;font-size:13px;font-weight:750;letter-spacing:.2px}
+.nav{position:sticky;top:0;background:#ffffffed;backdrop-filter:blur(14px);z-index:5;border-bottom:1px solid #e8edf2}
+.navin{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:950;color:var(--navy);line-height:1.02;letter-spacing:-.6px;font-size:18px;flex-shrink:0}
+.brand-mark{width:68px;height:68px;object-fit:cover;border-radius:18px;box-shadow:0 6px 18px #153b6826;border:3px solid white}
+.brand-name b{color:var(--pink)}
+nav{display:flex;gap:25px;font-weight:750;font-size:14px;color:#36546e}
+nav a:hover{color:var(--pink-dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:999px;background:var(--pink);color:white;font-weight:850;box-shadow:0 8px 18px #ef559b35;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px #ef559b42}
+.btn.blue{background:var(--blue);box-shadow:0 8px 18px #0877bd30}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 8% 15%,#fff 0 5%,transparent 5.2%),linear-gradient(125deg,#e7f8ff 0%,#fff4f9 60%,#fff8e5 100%);padding:64px 0 72px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero:before{width:210px;height:210px;border:24px solid #ffffff70;right:-95px;top:-105px}
+.hero:after{width:92px;height:92px;background:#ffd85775;left:-35px;bottom:30px}
+.heroGrid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:54px}
+.tag{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1.2px;font-size:12px}
+.tag:before{content:"✦";font-size:16px;color:var(--pink)}
+h1{font-size:clamp(42px,5.4vw,68px);line-height:1.02;letter-spacing:-2.8px;color:var(--navy);margin:17px 0}
+h1 em{font-style:normal;color:var(--pink-dark)}
+.lead{font-size:18px;line-height:1.7;max-width:600px;margin:0;color:#3e5a73}
+.heroActions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}
+.heroNote{display:flex;gap:10px;align-items:center;margin-top:24px;color:#527089;font-size:13px;font-weight:750}
+.heroNote span{display:inline-flex;align-items:center;gap:6px}
+.heroNote i{width:5px;height:5px;border-radius:50%;background:var(--pink)}
+.heroVisual{position:relative;padding:8px 10px 18px 4px}
+.photoFrame{padding:10px;background:#fff;border-radius:34px;box-shadow:0 24px 60px #153b6828;transform:rotate(1.2deg)}
+.photo{display:block;width:100%;height:420px;object-fit:cover;border-radius:26px}
+.floatNote{position:absolute;background:white;border-radius:18px;padding:13px 17px;box-shadow:0 10px 28px #153b6822;font-weight:850;color:var(--navy);font-size:14px}
+.noteTop{top:25px;left:-22px;transform:rotate(-4deg)}
+.noteBottom{bottom:0;right:-14px;transform:rotate(3deg);color:#bd397e}
+section{padding:82px 0}
+.head{text-align:center;max-width:730px;margin:0 auto 42px}
+.head .tag{justify-content:center}
+.head h2{font-size:clamp(31px,4vw,46px);line-height:1.1;letter-spacing:-1.5px;color:var(--navy);margin:12px 0}
+.head p{line-height:1.75;color:var(--muted);font-size:16px;margin:0}
+.offer{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;overflow:hidden;padding:25px 24px 27px;border-radius:24px;background:var(--sky);border:1px solid #d4effb;min-height:195px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 34px #153b6817}
+.card:nth-child(3n+2){background:#fff0f7;border-color:#f9d5e7}
+.card:nth-child(3n){background:#fff8df;border-color:#f5e9b6}
+.card:after{content:"";position:absolute;width:105px;height:105px;border-radius:50%;right:-45px;bottom:-54px;background:#ffffff65}
+.ico{width:54px;height:54px;border-radius:18px;background:#ffffffc9;display:grid;place-items:center;font-size:29px}
+.card h3{color:var(--navy);font-size:19px;margin:15px 0 7px}
+.card p{line-height:1.65;font-size:14px;margin:0;color:#4d667b}
+.occasions{position:relative;overflow:hidden;background:linear-gradient(125deg,#0755a5,#0877bd 55%,#16a4ce);color:white}
+.occasions:after{content:"🎈";position:absolute;right:5%;top:5%;font-size:110px;opacity:.16;transform:rotate(14deg)}
+.occasionGrid{position:relative;z-index:1;display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+.occasionCopy .tag{color:#ffe17a}
+.occasionCopy .tag:before{color:#ffd857}
+.occasionCopy h2{font-size:clamp(34px,4vw,48px);line-height:1.08;letter-spacing:-1.5px;margin:14px 0}
+.occasionCopy p{line-height:1.75;color:#e3f4ff;margin:0}
+.chips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.chips span{display:flex;gap:11px;align-items:center;background:#ffffff18;border:1px solid #ffffff35;padding:16px;border-radius:16px;font-weight:780;backdrop-filter:blur(4px)}
+.chips b{font-size:23px}
+.gallery{background:var(--cream)}
+.galleryGrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+.tile{position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#b8eaff,#f8c6df);box-shadow:0 10px 24px #153b6814}
+.tile:first-child{grid-column:span 2;grid-row:span 2}
+.tile:nth-child(5){grid-column:span 2}
+.tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.tile:hover img{transform:scale(1.045)}
+.promise{background:#fff}
+.promiseBox{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:22px;border-radius:22px;background:#f4edff;color:#493c72;font-weight:850;text-align:center}
+.promiseBox span{display:inline-flex;align-items:center;gap:8px}
+.promiseBox i{width:6px;height:6px;background:var(--pink);border-radius:50%}
+.contact{padding-top:24px;background:linear-gradient(180deg,#fff 0%,#fff0f7 100%)}
+.contactBox{position:relative;overflow:hidden;background:linear-gradient(120deg,#fff,#f5fbff);padding:42px;border:1px solid #f5ddeb;border-radius:32px;box-shadow:0 18px 48px #153b6818;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
+.contactBox:after{content:"✨";position:absolute;right:28px;top:17px;font-size:46px;opacity:.7}
+.contactBox h2{color:var(--navy);font-size:clamp(30px,4vw,42px);letter-spacing:-1px;margin:10px 0}
+.contactBox p{line-height:1.9;color:#526b80}
+.contactBox a:not(.btn){font-weight:800;color:var(--blue)}
+footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-height:1.9}
+@media(max-width:850px){nav{gap:14px}.navin{gap:12px}.heroGrid{gap:28px}.photo{height:360px}.occasionGrid{gap:28px}}
+@media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:first-child{grid-column:span 2;grid-row:span 2}.tile:nth-child(5){grid-column:span 1}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
+@media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:0}.navCta{padding:10px 12px}.brand-mark{width:49px;height:49px}.logo{font-size:14px}}
 </style>
 </head>
 <body>
-<div class="top">🎈 Bajkowe Animacje - Lublin i okolice · wydarzenia dla dzieci</div>
-<header class="nav"><div class="wrap navin"><a class="logo" href="#start"><img class="brand-mark" src="assets/logo.jpg?v=2" alt="">BAJKOWE <span>ANIMACJE</span> ✨</a><nav><a href="#oferta">Oferta</a><a href="#placowki">Przedszkola i szkoły</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a></nav><a class="btn" href="#kontakt">Napisz do nas</a></div></header>
+<div class="top">🎈 Bajkowe Animacje dla dzieci · Lublin i okolice · radość na każdą okazję 🎉</div>
+<header class="nav"><div class="wrap navin">
+<a class="logo" href="#start"><img class="brand-mark" src="assets/logo.jpg?v=3" alt=""><span class="brand-name">BAJKOWE<br><b>ANIMACJE</b></span></a>
+<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a></nav>
+<a class="btn navCta" href="#kontakt">Zapytaj o termin <span>→</span></a>
+</div></header>
 <main>
-<section class="hero" id="start"><div class="wrap heroGrid"><div><span class="tag">Radość, ruch i wyobraźnia</span><h1>Małe chwile.<br><em>Wielka magia</em><br>zabawy!</h1><p class="lead">Organizujemy animacje, które angażują, rozśmieszają i zostają w pamięci. Od kameralnych urodzin po duże wydarzenia rodzinne, szkolne i plenerowe.</p><div class="actions"><a class="btn" href="#kontakt">Zaplanuj imprezę</a><a class="btn blue" href="#oferta">Zobacz ofertę</a></div></div><img class="photo" src="assets/galeria-01.jpg?v=2" alt="Dzieci bawią się wielkimi bańkami mydlanymi podczas plenerowych animacji w Lublinie"></div></section>
-<section id="oferta"><div class="wrap"><div class="head"><span class="tag">Co możemy przygotować?</span><h2>Jedna ekipa, mnóstwo pomysłów</h2><p>Dopasowujemy atrakcje do wieku dzieci, charakteru wydarzenia i miejsca. Wybierz klimat, a my zadbamy o dobrą zabawę.</p></div><div class="cards">
-<article class="card"><div class="ico">🎂</div><h3>Urodziny i przyjęcia</h3><p>Tematyczne zabawy, konkursy, tańce, gry ruchowe i animacje dopasowane do małych solenizantów.</p></article>
-<article class="card"><div class="ico">💍</div><h3>Wesela i uroczystości</h3><p>Animacje i atrakcje dla dzieci podczas wesel, komunii, chrzcin i rodzinnych spotkań.</p></article>
-<article class="card"><div class="ico">🎪</div><h3>Festyny i pikniki</h3><p>Kolorowe strefy zabaw, konkurencje i animacje ruchowe na wydarzenia plenerowe.</p></article>
-<article class="card"><div class="ico">🫧</div><h3>Bańki mydlane XXL</h3><p>Ogromne bańki, bańkowe eksperymenty i widowiskowe chwile dla dzieci i dorosłych.</p></article>
-<article class="card"><div class="ico">🫧</div><h3>Piana i bubble show</h3><p>Piana party, bańkowe kostiumy, bańki dymne i magiczne atrakcje.</p></article>
-<article class="card"><div class="ico">🎨</div><h3>Kreatywne atrakcje</h3><p>Malowanie twarzy, brokatowe tatuaże, balonowe kształty, piniaty i zabawy tematyczne.</p></article>
+<section class="hero" id="start"><div class="wrap heroGrid">
+<div>
+<span class="tag">Bajkowe Animacje dla Dzieci · Lublin</span>
+<h1>Zaplanuj <em>wyjątkową zabawę</em> dla swojego dziecka!</h1>
+<p class="lead">Szukasz pomysłu na niezapomniane urodziny, przyjęcie rodzinne lub wyjątkową atrakcję dla dzieci? Bajkowe Animacje to mnóstwo radości, śmiechu i wspaniałej zabawy!</p>
+<div class="heroActions"><a class="btn" href="#kontakt">Zapytaj o dostępny termin <span>💌</span></a><a class="btn blue" href="#oferta">Poznaj atrakcje <span>↓</span></a></div>
+<div class="heroNote"><span>🎈 Dobra zabawa</span><i></i><span>🫧 Bańki i niespodzianki</span><i></i><span>💖 Wspomnienia na długo</span></div>
+</div>
+<div class="heroVisual"><div class="photoFrame"><img class="photo" src="assets/galeria-01.jpg?v=3" alt="Dzieci tworzą wielkie bańki mydlane podczas plenerowych animacji"></div><div class="floatNote noteTop">🥳 Uśmiech od pierwszej zabawy</div><div class="floatNote noteBottom">🫧 Magiczne bańki XXL</div></div>
+</div></section>
+<section class="offer" id="oferta"><div class="wrap">
+<div class="head"><span class="tag">W naszej ofercie</span><h2>Małe atrakcje, wielkie WOW!</h2><p>Wybierz ulubione zabawy albo zdaj się na nas — przygotujemy program dopasowany do dzieci i charakteru imprezy.</p></div>
+<div class="cards">
+<article class="card"><div class="ico">🎶</div><h3>Animacje muzyczno-ruchowe</h3><p>Tańce, zabawy sportowe i dużo energii dla małych oraz większych uczestników.</p></article>
+<article class="card"><div class="ico">🫧</div><h3>Magiczne bańki mydlane</h3><p>Wielkie bańki, bańkowe czary i wyjątkowa atrakcja — zamykanie w bańce.</p></article>
+<article class="card"><div class="ico">🎨</div><h3>Kolorowe przemiany</h3><p>Malowanie twarzy i brokatowe tatuaże, które dodają imprezie bajkowych kolorów.</p></article>
+<article class="card"><div class="ico">🎈</div><h3>Balonowe kształty</h3><p>Modelowanie balonów — mały upominek i wielka radość dla każdego dziecka.</p></article>
+<article class="card"><div class="ico">🏆</div><h3>Zabawy i konkursy</h3><p>Wspólne wyzwania, śmiech, ruch i zdrowa dawka pozytywnej rywalizacji.</p></article>
+<article class="card"><div class="ico">✨</div><h3>Mnóstwo niespodzianek</h3><p>Każda impreza jest inna — dobierzemy atrakcje do wieku i pomysłu na wydarzenie.</p></article>
 </div></div></section>
-<section class="band" id="placowki"><div class="wrap"><span class="tag" style="color:#ffe18a">Dla placówek edukacyjnych</span><h2>Przedszkola i szkoły też mogą bawić się bajkowo!</h2><p>Przygotowujemy wydarzenia łączące ruch, muzykę, kreatywność i wspólną zabawę. Dopasujemy program do pory roku, tematu przewodniego lub kalendarza szkolnego.</p><div class="chips"><span>🎭 Przedstawienia sezonowe</span><span>🎉 Bale karnawałowe</span><span>🎨 Warsztaty tematyczne</span><span>🎵 Zajęcia muzyczne</span><span>🪩 Dyskoteki szkolne</span><span>🤸 Animacje i sport</span></div></div></section>
-<section class="gallery" id="galeria"><div class="wrap"><div class="head"><span class="tag">Zobacz, jak się bawimy</span><h2>Nasze bajkowe chwile</h2><p>Trochę ruchu, dużo śmiechu i mnóstwo kolorów. Tak wyglądają wydarzenia z Bajkowymi Animacjami.</p></div><div class="galleryGrid"><div class="tile"><img src="assets/galeria-01.jpg?v=2" alt="Dzieci bawią się bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-02.jpg?v=2" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-03.jpg?v=2" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-04.jpg?v=2" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-05.jpg?v=2" alt="Animacje i bańki mydlane podczas rodzinnej uroczystości" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-06.jpg?v=2" alt="Zabawy dla dzieci podczas wesela" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-07.jpg?v=2" alt="Pokaz ogromnych baniek mydlanych dla dzieci" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-08.jpg?v=2" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-09.jpg?v=2" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div><div class="tile"><img src="assets/galeria-10.jpg?v=2" alt="Piana party i zabawy ruchowe dla dzieci" loading="lazy" decoding="async"></div></div></div></section>
-<section class="why"><div class="wrap"><div class="head"><span class="tag">Dlaczego Bajkowe Animacje?</span><h2>Bo najlepsza zabawa to ta, w której każdy czuje się częścią przygody.</h2><p>Stawiamy na energię, kreatywność i dobry kontakt z dziećmi. Tworzymy przestrzeń do wspólnej zabawy, odkrywania i śmiechu. Program dopasowujemy do wieku, miejsca i charakteru wydarzenia.</p></div></div></section>
-<section class="contact" id="kontakt"><div class="wrap contactBox"><div><span class="tag">Zaplanujmy coś wyjątkowego</span><h2>Masz pomysł na wydarzenie?</h2><p>Napisz lub zadzwoń - wspólnie dobierzemy atrakcje.<br><b>Telefon:</b> <a href="tel:+48502377089">502 377 089</a><br><b>E-mail:</b> <a href="mailto:bajkoweanimacjelublin@gmail.com">bajkoweanimacjelublin@gmail.com</a></p></div><div class="actions"><a class="btn" href="tel:+48502377089">Zadzwoń</a><a class="btn blue" href="mailto:bajkoweanimacjelublin@gmail.com">Napisz e-mail</a><a class="btn blue" href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></div></div></section>
-</main><footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje</footer>
+<section class="occasions" id="okazje"><div class="wrap occasionGrid">
+<div class="occasionCopy"><span class="tag">Świętuj po swojemu</span><h2>Animacje na każdą okazję!</h2><p>Od kameralnych urodzin po duże wydarzenia. Napisz do nas, zapytaj o dostępne terminy i wspólnie dopasujmy ofertę do Twojej imprezy.</p></div>
+<div class="chips">
+<span><b>🎂</b> Przyjęcia urodzinowe</span><span><b>💍</b> Wesela i komunie</span>
+<span><b>🏡</b> Imprezy rodzinne</span><span><b>🎪</b> Festyny i pikniki</span>
+<span><b>🎉</b> Wydarzenia firmowe</span><span><b>🌟</b> Inne wyjątkowe okazje</span>
+</div>
+</div></section>
+<section class="gallery" id="galeria"><div class="wrap">
+<div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy — zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
+<div class="galleryGrid">
+<div class="tile"><img src="assets/galeria-01.jpg?v=3" alt="Dzieci bawią się bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-02.jpg?v=3" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-03.jpg?v=3" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-04.jpg?v=3" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-05.jpg?v=3" alt="Animacje i bańki mydlane podczas rodzinnej uroczystości" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-06.jpg?v=3" alt="Zabawy dla dzieci podczas wesela" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-07.jpg?v=3" alt="Pokaz ogromnych baniek mydlanych dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-09.jpg?v=3" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Piana party i zabawy ruchowe dla dzieci" loading="lazy" decoding="async"></div>
+</div></div></section>
+<section class="promise"><div class="wrap"><div class="promiseBox"><span>💖 Radość i śmiech</span><i></i><span>🎨 Atrakcje dopasowane do dzieci</span><i></i><span>📍 Lublin i okolice</span></div></div></section>
+<section class="contact" id="kontakt"><div class="wrap contactBox">
+<div><span class="tag">Zaplanujmy coś wyjątkowego</span><h2>Zapytaj o wolny termin!</h2><p>Napisz do nas w wiadomości prywatnej, a pomożemy dobrać atrakcje do Twojej imprezy.<br><b>Telefon:</b> <a href="tel:+48502377089">502 377 089</a><br><b>E-mail:</b> <a href="mailto:bajkoweanimacjelublin@gmail.com">bajkoweanimacjelublin@gmail.com</a></p></div>
+<div class="heroActions"><a class="btn" href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr" target="_blank" rel="noopener">Napisz wiadomość <span>💌</span></a><a class="btn blue" href="tel:+48502377089">Zadzwoń <span>☎️</span></a></div>
+</div></section>
+</main>
+<footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje dla Dzieci</footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body></html>
