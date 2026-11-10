@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="icon" href="/assets/logo.jpg" type="image/jpeg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Zaplanuj wyjątkową zabawę dla swojego dziecka! Bajkowe Animacje dla dzieci w Lublinie i okolicach: urodziny, bańki mydlane, malowanie twarzy, balony i animacje na każdą okazję.">
+<meta name="description" content="Bajkowe Animacje dla dzieci w Lublinie i okolicach: urodziny, wesela, bańki, malowanie twarzy, bale karnawałowe, dyskoteki i zabawy andrzejkowe.">
 <meta name="theme-color" content="#fff8ef">
 <title>Bajkowe Animacje Lublin | Wyjątkowa zabawa dla dzieci</title>
 <style>
@@ -103,6 +103,17 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .reviewCard blockquote{margin:0 0 20px;color:#405b72;line-height:1.7;font-size:15px}
 .reviewAuthor{margin-top:auto;padding-top:13px;border-top:1px solid #edf0f3;color:var(--navy);font-weight:850}
 @media(max-width:680px){.reviewControls{margin:-18px 0 10px}.reviewCard{flex-basis:86vw;padding:20px}.reviewCard blockquote{font-size:14px}}
+
+.special{background:linear-gradient(135deg,#fff8ef,#f2faff)}
+.specialGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}
+.specialList{display:grid;gap:12px}
+.specialItem{padding:18px 20px;border-radius:19px;background:#fff;border:1px solid #e8edf2;box-shadow:0 8px 22px #153b6810}
+.specialItem h3{margin:0 0 7px;color:var(--navy);font-size:18px}
+.specialItem p{margin:0;color:#526b80;line-height:1.65;font-size:14px}
+.specialPhotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.specialPhotos img{display:block;width:100%;height:205px;object-fit:cover;border-radius:20px;box-shadow:0 10px 24px #153b6818}
+.specialPhotos img:first-child{grid-column:span 2;height:280px}
+@media(max-width:680px){.specialGrid{grid-template-columns:1fr;gap:22px}.specialPhotos img{height:150px}.specialPhotos img:first-child{height:220px}}
 @media(max-width:850px){nav{gap:14px}.navin{gap:12px}.heroGrid{gap:28px}.photo{height:360px}.occasionGrid{gap:28px}}
 @media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:first-child{grid-column:span 2;grid-row:span 2}.tile:nth-child(5){grid-column:span 1}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
 @media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:0}.navCta{padding:10px 12px}.brand-mark{width:49px;height:49px}.logo{font-size:14px}}
@@ -112,7 +123,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="top">🎈 Bajkowe Animacje dla dzieci · Lublin i okolice · radość na każdą okazję 🎉</div>
 <header class="nav"><div class="wrap navin">
 <a class="logo" href="#start"><img class="brand-mark" src="assets/logo.jpg?v=3" alt=""><span class="brand-name">BAJKOWE<br><b>ANIMACJE</b></span></a>
-<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
+<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#imprezy">Bale i dyskoteki</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn navCta" href="#kontakt">Zapytaj o termin <span>→</span></a>
 </div></header>
 <main>
@@ -124,7 +135,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="heroActions"><a class="btn" href="#kontakt">Zapytaj o dostępny termin <span>💌</span></a><a class="btn blue" href="#oferta">Poznaj atrakcje <span>↓</span></a></div>
 <div class="heroNote"><span>🎈 Dobra zabawa</span><i></i><span>🫧 Bańki i niespodzianki</span><i></i><span>💖 Wspomnienia na długo</span></div>
 </div>
-<div class="heroVisual"><div class="photoFrame"><img class="photo" src="assets/galeria-01.jpg?v=3" alt="Dzieci tworzą wielkie bańki mydlane podczas plenerowych animacji"></div><div class="floatNote noteTop">🥳 Uśmiech od pierwszej zabawy</div><div class="floatNote noteBottom">🫧 Magiczne bańki XXL</div></div>
+<div class="heroVisual"><div class="photoFrame"><img class="photo" src="assets/animacje-plenerowe-banki-01.jpg" alt="Dzieci bawią się wielkimi bańkami mydlanymi podczas animacji plenerowych"></div><div class="floatNote noteTop">🥳 Uśmiech od pierwszej zabawy</div><div class="floatNote noteBottom">🫧 Magiczne bańki XXL</div></div>
 </div></section>
 <section class="offer" id="oferta"><div class="wrap">
 <div class="head"><span class="tag">W naszej ofercie</span><h2>Małe atrakcje, wielkie WOW!</h2><p>Wybierz ulubione zabawy albo zdaj się na nas — przygotujemy program dopasowany do dzieci i charakteru imprezy.</p></div>
@@ -144,6 +155,17 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <span><b>🎉</b> Wydarzenia firmowe</span><span><b>🌟</b> Inne wyjątkowe okazje</span>
 </div>
 </div></section>
+<section class="special" id="imprezy"><div class="wrap">
+<div class="head"><span class="tag">Jeszcze więcej okazji do zabawy</span><h2>Bale karnawałowe, dyskoteki i Andrzejki</h2><p>Przygotowujemy tematyczne animacje dla dzieci w Lublinie i okolicach — z programem dopasowanym do wieku uczestników i charakteru wydarzenia.</p></div>
+<div class="specialGrid"><div class="specialList">
+<article class="specialItem"><h3>🎭 Bale karnawałowe</h3><p>Kolorowe zabawy, konkursy i tańce, które pomagają stworzyć radosny bal dla dzieci.</p></article>
+<article class="specialItem"><h3>🎶 Dyskoteki dla dzieci</h3><p>Muzyka, wspólne tańce i animacje ruchowe — dobra zabawa dla młodszych i starszych uczestników.</p></article>
+<article class="specialItem"><h3>🔮 Zabawy andrzejkowe</h3><p>Tematyczne spotkanie pełne zabaw, konkursów i andrzejkowych atrakcji dla dzieci.</p></article>
+</div><div class="specialPhotos">
+<img src="assets/zabawy-papierowa-dzieci-01.jpg" alt="Dzieci uczestniczą w radosnej zabawie podczas imprezy" loading="lazy" decoding="async">
+<img src="assets/zabawy-ruchowe-tunel-01.jpg" alt="Dziecko przechodzi przez kolorowy tunel animacyjny" loading="lazy" decoding="async">
+<img src="assets/zabawy-chusta-animacyjna-01.jpg" alt="Dzieci bawią się wspólnie z kolorową chustą animacyjną" loading="lazy" decoding="async">
+</div></div></div></section>
 <section class="gallery" id="galeria"><div class="wrap">
 <div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy — zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
 <div class="galleryGrid">
@@ -157,6 +179,23 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-09.jpg?v=3" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Piana party i zabawy ruchowe dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/animacje-plenerowe-banki-01.jpg" alt="Dzieci bawią się wielkimi bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/zabawy-ruchowe-tunel-01.jpg" alt="Dziecko przechodzi przez kolorowy tunel animacyjny" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/malowanie-twarzy-animatorka-01.jpg" alt="Animatorka maluje twarz dziecka podczas plenerowej imprezy" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/atrakcje-plenerowe-popcorn-01.jpg" alt="Stanowisko z popcornem podczas rodzinnego wydarzenia plenerowego" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/zabawy-chusta-animacyjna-01.jpg" alt="Dzieci uczestniczą we wspólnej zabawie z kolorową chustą animacyjną" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/animacje-piana-plener-01.jpg" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/malowanie-twarzy-zabawy-01.jpg" alt="Dziecko z pomalowaną buzią podczas zabawy z bańkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/spotkanie-mikolajkowe-animacje-01.jpg" alt="Dzieci spotykają się ze Świętym Mikołajem podczas wydarzenia" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/zabawa-papierowa-dzieci-01.jpg" alt="Dzieci bawią się papierowymi serpentynami podczas imprezy" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawa-dzieci-01.jpg" alt="Animatorka i Święty Mikołaj prowadzą zabawę dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-grupa-dzieci-01.jpg" alt="Wspólne zdjęcie dzieci i animatorów podczas Mikołajek" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawy-tasiemki-01.jpg" alt="Dzieci tańczą i bawią się kolorowymi wstążkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawy-papier-01.jpg" alt="Dzieci uczestniczą w ruchowej zabawie z papierowymi skrawkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-spotkanie-z-mikolajem-01.jpg" alt="Święty Mikołaj spotyka się z dzieckiem podczas imprezy" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-wspolne-zabawy-01.jpg" alt="Dzieci uczestniczą w zabawie podczas spotkania z Mikołajem" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-wreczenie-prezentu-01.jpg" alt="Animatorka w stroju Mikołajki wręcza dziecku prezent" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-chusta-animacyjna-01.jpg" alt="Dzieci bawią się z animatorami przy kolorowej chuście" loading="lazy" decoding="async"></div>
 </div></div></section>
 
 <section class="reviews" id="opinie"><div class="wrap">
