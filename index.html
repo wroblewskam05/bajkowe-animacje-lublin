@@ -88,6 +88,21 @@ section{padding:82px 0}
 .contactBox p{line-height:1.9;color:#526b80}
 .contactBox a:not(.btn){font-weight:800;color:var(--blue)}
 footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-height:1.9}
+
+.reviews{background:#fff}
+.reviewControls{display:flex;justify-content:flex-end;gap:10px;margin:-20px 0 12px}
+.reviewArrow{width:44px;height:44px;border:1px solid #dce6ee;border-radius:50%;background:#fff;color:var(--navy);font-size:22px;font-weight:800;cursor:pointer;box-shadow:0 5px 14px #153b6812}
+.reviewArrow:hover{background:var(--sky)}
+.reviewTrack{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 3px 22px;scrollbar-color:#ef9bc3 #fff0f7;scrollbar-width:thin}
+.reviewTrack:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:22px}
+.reviewCard{flex:0 0 min(82vw,370px);display:flex;flex-direction:column;scroll-snap-align:start;padding:23px;border:1px solid #f3d9e6;border-radius:22px;background:linear-gradient(145deg,#fff8fb,#fff);box-shadow:0 12px 30px #153b6812}
+.reviewMeta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.reviewStars{color:#f2b700;font-size:18px;letter-spacing:1px;white-space:nowrap}
+.reviewSource{font-size:12px;font-weight:850;padding:6px 10px;border-radius:999px;background:#f1f5f8;color:#526b80;white-space:nowrap}
+.reviewSource.facebook{background:#e9f1ff;color:#2862b8}
+.reviewCard blockquote{margin:0 0 20px;color:#405b72;line-height:1.7;font-size:15px}
+.reviewAuthor{margin-top:auto;padding-top:13px;border-top:1px solid #edf0f3;color:var(--navy);font-weight:850}
+@media(max-width:680px){.reviewControls{margin:-18px 0 10px}.reviewCard{flex-basis:86vw;padding:20px}.reviewCard blockquote{font-size:14px}}
 @media(max-width:850px){nav{gap:14px}.navin{gap:12px}.heroGrid{gap:28px}.photo{height:360px}.occasionGrid{gap:28px}}
 @media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:first-child{grid-column:span 2;grid-row:span 2}.tile:nth-child(5){grid-column:span 1}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
 @media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:0}.navCta{padding:10px 12px}.brand-mark{width:49px;height:49px}.logo{font-size:14px}}
@@ -97,7 +112,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="top">🎈 Bajkowe Animacje dla dzieci · Lublin i okolice · radość na każdą okazję 🎉</div>
 <header class="nav"><div class="wrap navin">
 <a class="logo" href="#start"><img class="brand-mark" src="assets/logo.jpg?v=3" alt=""><span class="brand-name">BAJKOWE<br><b>ANIMACJE</b></span></a>
-<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a></nav>
+<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn navCta" href="#kontakt">Zapytaj o termin <span>→</span></a>
 </div></header>
 <main>
@@ -143,6 +158,18 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="tile"><img src="assets/galeria-09.jpg?v=3" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Piana party i zabawy ruchowe dla dzieci" loading="lazy" decoding="async"></div>
 </div></div></section>
+
+<section class="reviews" id="opinie"><div class="wrap">
+<div class="head"><span class="tag">Miłe słowa po wspólnej zabawie</span><h2>Opinie rodziców i gości</h2><p>Zobacz, jak wspominają Bajkowe Animacje osoby, które bawiły się z nami na swoich imprezach.</p></div>
+<div class="reviewControls"><button class="reviewArrow" type="button" data-review-direction="-1" aria-label="Pokaż wcześniejsze opinie">‹</button><button class="reviewArrow" type="button" data-review-direction="1" aria-label="Pokaż następne opinie">›</button></div>
+<div class="reviewTrack" id="reviewTrack" tabindex="0" aria-label="Przewijane opinie klientów">
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewSource facebook">Facebook · rekomendacja</span></div><blockquote>„Serdecznie polecam! Organizowaliśmy 2-gie urodziny syna, na imprezie były zarówno maluszki jak i 6-latki i żadne dziecko się nie nudziło. Animacje były dostosowane do wieku dzieci za co serdecznie dziękujemy! Poza tym świetny kontakt z właścicielką i bogata oferta dodatkowych atrakcji! Z pewnością skorzystamy jeszcze nie raz!”</blockquote><div class="reviewAuthor">Agnieszka Pilewska</div></article>
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewSource facebook">Facebook · rekomendacja</span></div><blockquote>„Zamówiliśmy Panie animatorki na nasze wesele. Dzieci bardzo zadowolone, świetnie się bawiły, a nasz prywatny trzylatek, zwykle niechętny do zabaw z grupą, bardzo chętnie uczestniczył w aktywnościach proponowanych przez Panie animatorki. Zamawialiśmy trochę z obawą, bo nie widzieliśmy wcześniej Pań w akcji, ale z czystym sumieniem możemy polecić: super pomysł na przygotowanie dla nas niespodzianki z dziećmi.”</blockquote><div class="reviewAuthor">Agnieszka Dominika Cegłowska</div></article>
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewStars" aria-label="5 na 5 gwiazdek">★★★★★</span><span class="reviewSource">Google</span></div><blockquote>„Z czystym sumieniem polecamy animatorki z Bajkowych Animacji na wesele. Mieliśmy na imprezie ponad 10 dzieci, które były zachwycone zabawami i nie było mowy żeby wróciły do stołu spędzić czas z rodzicami. A zabawy z dziećmi i dorosłymi na parkiecie zmiażdżyły wszystkich z planszy!!! Dzieci razem z paniami animatorkami przygotowały niespodziankę dla nas (młoda para) więc mamy cudowną pamiątkę za którą bardzo dziękujemy. Wybranie Bajkowych Animacji na wesele to był strzał w 10-tkę!”</blockquote><div class="reviewAuthor">Piotr Malinowski</div></article>
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewStars" aria-label="5 na 5 gwiazdek">★★★★★</span><span class="reviewSource">Google</span></div><blockquote>„Bardzo polecam Panie animatorki. Super zabawiły dzieci na weselu. Miały różne zabawy, które ciekawiły. Nie tylko najmłodsi byli zabawiani, również skorzystali dorośli. Panie bardzo miłe i z super podejściem do dzieciaków. Bezproblemowo były chętne na przedłużenie zabaw (dorośli również chcieli skorzystać). Z czystym sumieniem bardzo polecam. 😊 😁”</blockquote><div class="reviewAuthor">Oliwia Stadnik</div></article>
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewStars" aria-label="5 na 5 gwiazdek">★★★★★</span><span class="reviewSource">Google</span></div><blockquote>„Bajkowe Animacje najlepsi animatorzy z jakimi miałam przyjemność współpracować, wzięłam państwa na Komunię córki i był to najlepszy wybór jaki mogłam dokonać. Panie profesjonalne, dzieci były bardzo szczęśliwe i bawiły się cały czas, uczestniczyły dosłownie we wszystkim co panie zaproponowały. Dodam, że nasze dzieci są wymagające i w różnym wieku, ale panie dźwignęły to super. Z panią właścicielką dosłownie wszystko dało się dogadać, super kobieta. POLECAM z całego serca i na pewno jeszcze skorzystam 😍 😍”</blockquote><div class="reviewAuthor">Magda Szafranek</div></article>
+<article class="reviewCard"><div class="reviewMeta"><span class="reviewStars" aria-label="5 na 5 gwiazdek">★★★★★</span><span class="reviewSource">Google</span></div><blockquote>„Z czystym sumieniem bardzo polecam Panie Animatorki z Bajkowych Animacji!! Panie są bardzo sympatyczne, uśmiechnięte, mają super podejście do dzieci, a ich kreatywność i serca, które wkładają w swoją pracę przekładają się na ekstra zabawy oraz atmosferę. Po raz kolejny już mieliśmy okazję się spotkać i razem bawić! Dzieciaki były zachwycone zabawami, a także ‘gadżetami’ i sprzętem jakim dysponowały Animatorki. Z takimi prowadzącymi na zabawie nie ma nudy!”</blockquote><div class="reviewAuthor">Patrycja Prokopowicz</div></article>
+</div></div></section>
 <section class="promise"><div class="wrap"><div class="promiseBox"><span>💖 Radość i śmiech</span><i></i><span>🎨 Atrakcje dopasowane do dzieci</span><i></i><span>📍 Lublin i okolice</span></div></div></section>
 <section class="contact" id="kontakt"><div class="wrap contactBox">
 <div><span class="tag">Zaplanujmy coś wyjątkowego</span><h2>Zapytaj o wolny termin!</h2><p>Napisz do nas w wiadomości prywatnej, a pomożemy dobrać atrakcje do Twojej imprezy.<br><b>Telefon:</b> <a href="tel:+48502377089">502 377 089</a><br><b>E-mail:</b> <a href="mailto:bajkoweanimacjelublin@gmail.com">bajkoweanimacjelublin@gmail.com</a></p></div>
@@ -150,5 +177,14 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 </div></section>
 </main>
 <footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje dla Dzieci</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const reviewTrack=document.getElementById('reviewTrack');
+document.querySelectorAll('[data-review-direction]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const direction=Number(button.dataset.reviewDirection);
+    reviewTrack.scrollBy({left:direction*reviewTrack.clientWidth*0.82,behavior:'smooth'});
+  });
+});
+</script>
 </body></html>
