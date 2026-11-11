@@ -115,6 +115,8 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .specialPhotos img:first-child{object-position:center 23%}
 @media(max-width:680px){.specialGrid{grid-template-columns:1fr;gap:22px}.specialPhotos img{height:250px}.specialPhotos img:first-child{height:280px}}
 .mascotCard{overflow:visible;z-index:1}
+.musicalCard{overflow:visible;z-index:1}
+.musicalCard:hover,.musicalCard:focus-within,.musicalCard.showPhotos{z-index:4}
 .mascotCard:hover,.mascotCard:focus-within{z-index:4}
 .mascotPreview{position:static;margin-top:14px}
 .mascotPreview summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;color:var(--blue);font-weight:850;font-size:13px;list-style:none}
@@ -160,7 +162,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <section class="offer" id="oferta"><div class="wrap">
 <div class="head"><span class="tag">W naszej ofercie</span><h2>Małe atrakcje, wielkie WOW!</h2><p>Wybierz ulubione zabawy albo zdaj się na nas. Przygotujemy program dopasowany do dzieci i charakteru imprezy.</p></div>
 <div class="cards">
-<article class="card"><div class="ico">🎶</div><h3>Muzyczne atrakcje i występy</h3><p>Bajkowe koncerty i występy dla dzieci, wspólne śpiewanie oraz spotkanie z Elsą i Anną przy sztucznym śniegu.</p></article>
+<article class="card musicalCard"><div class="ico">🎶</div><h3>Muzyczne atrakcje i występy</h3><p>Bajkowe koncerty i występy dla dzieci, wspólne śpiewanie oraz spotkanie z Elsą i Anną przy sztucznym śniegu.</p><details class="mascotPreview musicalPreview"><summary>Zobacz zdjęcia z występów</summary><div class="mascotPhotos"><img src="assets/wystep-elsa-impreza-plenerowa.png" alt="Elsa występuje dla dzieci podczas plenerowego wydarzenia" loading="lazy" decoding="async"><img src="assets/zabawa-sztucznym-sniegiem-elsa.png" alt="Dzieci bawią się w sztucznym śniegu z animatorkami w strojach Elsy i Anny" loading="lazy" decoding="async"><img src="assets/koncert-elsa-anna-dzieci.png" alt="Elsa i Anna występują na scenie przed grupą dzieci" loading="lazy" decoding="async"></div></details></article>
 <article class="card"><div class="ico">🫧</div><h3>Magiczne bańki mydlane</h3><p>Wielkie bańki, bańkowe czary i wyjątkowa atrakcja, czyli zamykanie w bańce.</p></article>
 <article class="card"><div class="ico">🎨</div><h3>Kolorowe przemiany</h3><p>Malowanie twarzy, brokatowe tatuaże i kolorowe warkoczyki, które dodają imprezie bajkowych kolorów.</p></article>
 <article class="card"><div class="ico">🎈</div><h3>Balonowe kształty</h3><p>Modelowanie balonów to mały upominek i wielka radość dla każdego dziecka.</p></article>
@@ -239,6 +241,9 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 document.getElementById('year').textContent=new Date().getFullYear();
 const mascotCard=document.querySelector('.mascotCard');
 const mascotPreview=mascotCard?.querySelector('.mascotPreview');
+const musicalCard=document.querySelector('.musicalCard');
+const musicalPreview=musicalCard?.querySelector('.musicalPreview');
+musicalPreview?.addEventListener('toggle',()=>musicalCard.classList.toggle('showPhotos',musicalPreview.open));
 if(mascotCard&&mascotPreview){
   mascotCard.addEventListener('pointerenter',event=>{
     if(event.pointerType==='mouse'||event.pointerType==='pen')mascotPreview.open=true;
