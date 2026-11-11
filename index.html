@@ -117,12 +117,11 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .mascotCard{overflow:visible;z-index:1}
 .musicalCard{overflow:visible;z-index:1}
 .musicalCard:hover,.musicalCard:focus-within,.musicalCard.showPhotos{z-index:4}
-.musicalCard .mascotPhotos{position:absolute;top:calc(100% + 12px);right:auto;bottom:auto;left:50%;transform:translateX(-50%);width:min(920px,calc(100vw - 28px));grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:14px;background:#fff;border:1px solid #e8edf2;border-radius:24px;box-shadow:0 22px 50px #153b6830}
-.musicalCard .mascotPhotos img{height:clamp(180px,24vw,300px);border-radius:16px}
+.musicalCard .mascotPhotos{position:absolute;top:calc(100% + 12px);right:auto;bottom:auto;left:50%;transform:translateX(-50%);width:min(700px,calc(100vw - 24px));grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:14px;background:#fff;border:1px solid #e8edf2;border-radius:24px;box-shadow:0 22px 50px #153b6830}
+.musicalCard .mascotPhotos img{height:clamp(200px,27vw,320px);border-radius:16px}
 .musicalCard .mascotPhotos img:first-child{object-position:70% center}
 .musicalCard .mascotPhotos img:nth-child(2){object-position:62% center}
-.musicalCard .mascotPhotos img:nth-child(3){object-position:center}
-@media(max-width:680px){.musicalCard .mascotPhotos{width:min(920px,calc(100vw - 20px));gap:7px;padding:8px;border-radius:17px}.musicalCard .mascotPhotos img{height:clamp(150px,38vw,230px);border-radius:11px}}
+@media(max-width:680px){.musicalCard .mascotPhotos{width:min(700px,calc(100vw - 24px));gap:8px;padding:9px;border-radius:17px}.musicalCard .mascotPhotos img{height:clamp(165px,42vw,240px);border-radius:11px}}
 
 .mascotCard:hover,.mascotCard:focus-within{z-index:4}
 .sweetCard{overflow:visible;z-index:1}
