@@ -125,6 +125,14 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 @media(max-width:680px){.musicalCard .mascotPhotos{width:min(920px,calc(100vw - 20px));gap:7px;padding:8px;border-radius:17px}.musicalCard .mascotPhotos img{height:clamp(150px,38vw,230px);border-radius:11px}}
 
 .mascotCard:hover,.mascotCard:focus-within{z-index:4}
+.sweetCard{overflow:visible;z-index:1}
+.sweetCard:hover,.sweetCard:focus-within,.sweetCard.showPhotos{z-index:4}
+.sweetCard .mascotPhotos{width:min(680px,calc(100vw - 40px));grid-template-columns:repeat(2,minmax(0,1fr))}
+.sweetCard .mascotPhotos img{height:clamp(200px,28vw,300px)}
+.sweetCard .mascotPhotos img:first-child{object-position:center}
+.sweetCard .mascotPhotos img:nth-child(2){object-position:center 60%}
+@media(max-width:680px){.sweetCard .mascotPhotos{width:min(680px,calc(100vw - 24px));gap:7px;padding:8px}.sweetCard .mascotPhotos img{height:clamp(165px,43vw,230px)}}
+
 .mascotPreview{position:static;margin-top:14px}
 .mascotPreview summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;color:var(--blue);font-weight:850;font-size:13px;list-style:none}
 .mascotPreview summary::-webkit-details-marker{display:none}
@@ -175,7 +183,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <article class="card"><div class="ico">🫧</div><h3>Magiczne bańki mydlane</h3><p>Wielkie bańki, bańkowe czary i wyjątkowa atrakcja, czyli zamykanie w bańce.</p></article>
 <article class="card"><div class="ico">🎨</div><h3>Kolorowe przemiany</h3><p>Malowanie twarzy, brokatowe tatuaże i kolorowe warkoczyki, które dodają imprezie bajkowych kolorów.</p></article>
 <article class="card"><div class="ico">🎈</div><h3>Balonowe kształty</h3><p>Modelowanie balonów to mały upominek i wielka radość dla każdego dziecka.</p></article>
-<article class="card"><div class="ico">🍫</div><h3>Słodkie atrakcje</h3><p>Fontanna czekoladowa, popcorn i wata cukrowa urozmaicą przyjęcie i sprawią dzieciom mnóstwo radości.</p></article>
+<article class="card sweetCard"><div class="ico">🍫</div><h3>Słodkie atrakcje</h3><p>Fontanna czekoladowa, popcorn i wata cukrowa urozmaicą przyjęcie i sprawią dzieciom mnóstwo radości.</p><details class="mascotPreview sweetPreview"><summary>Zobacz zdjęcia słodkich atrakcji</summary><div class="mascotPhotos"><img src="assets/wata-cukrowa-na-zywo.png" alt="Animatorka przygotowuje niebieską watę cukrową" loading="lazy" decoding="async"><img src="assets/stoisko-popcorn-wata-cukrowa.png" alt="Stoisko z popcornem i watą cukrową podczas wydarzenia" loading="lazy" decoding="async"></div></details></article>
 <article class="card mascotCard"><div class="ico">🐻</div><h3>Żywe maskotki</h3><p>Animatorzy w przebraniach maskotek, w tym Miś z bajki „Masza i Niedźwiedź”. To mnóstwo zdjęć, przytulasów i wspólnej zabawy.</p><details class="mascotPreview"><summary>Zobacz zdjęcia maskotek</summary><div class="mascotPhotos"><img src="assets/maskotka-myszka-dzieci.png" alt="Myszka w czerwonej sukience wita dzieci" loading="lazy" decoding="async"><img src="assets/maskotka-mis-grupa.png" alt="Duży pluszowy miś pozuje do zdjęcia z grupą dzieci i dorosłych" loading="lazy" decoding="async"><img src="assets/maskotka-postac-plener.png" alt="Duża bajkowa maskotka pozuje z dzieckiem podczas wydarzenia plenerowego" loading="lazy" decoding="async"></div></details></article>
 </div></div></section>
 <section class="occasions" id="okazje"><div class="wrap occasionGrid">
@@ -257,6 +265,21 @@ const mascotCard=document.querySelector('.mascotCard');
 const mascotPreview=mascotCard?.querySelector('.mascotPreview');
 const musicalCard=document.querySelector('.musicalCard');
 const musicalPreview=musicalCard?.querySelector('.musicalPreview');
+const sweetCard=document.querySelector('.sweetCard');
+const sweetPreview=sweetCard?.querySelector('.sweetPreview');
+sweetPreview?.addEventListener('toggle',()=>sweetCard.classList.toggle('showPhotos',sweetPreview.open));
+if(sweetCard&&sweetPreview){
+  sweetCard.addEventListener('pointerenter',event=>{
+    if(event.pointerType==='mouse'||event.pointerType==='pen')sweetPreview.open=true;
+  });
+  sweetCard.addEventListener('pointerleave',event=>{
+    if((event.pointerType==='mouse'||event.pointerType==='pen')&&!sweetCard.matches(':focus-within'))sweetPreview.open=false;
+  });
+  sweetCard.addEventListener('focusin',()=>sweetPreview.open=true);
+  sweetCard.addEventListener('focusout',event=>{
+    if(!sweetCard.contains(event.relatedTarget)&&!sweetCard.matches(':hover'))sweetPreview.open=false;
+  });
+}
 musicalPreview?.addEventListener('toggle',()=>musicalCard.classList.toggle('showPhotos',musicalPreview.open));
 if(musicalCard&&musicalPreview){
   musicalCard.addEventListener('pointerenter',event=>{
