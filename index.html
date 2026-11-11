@@ -117,9 +117,12 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .mascotCard{overflow:visible;z-index:1}
 .musicalCard{overflow:visible;z-index:1}
 .musicalCard:hover,.musicalCard:focus-within,.musicalCard.showPhotos{z-index:4}
-.musicalCard .mascotPhotos{position:static;top:auto;right:auto;bottom:auto;left:auto;transform:none;width:100%;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px;padding:8px;background:#ffffffbf;box-shadow:none}
-.musicalCard .mascotPhotos img{height:145px;border-radius:12px}
-@media(max-width:680px){.musicalCard .mascotPhotos{grid-template-columns:repeat(2,minmax(0,1fr))}.musicalCard .mascotPhotos img{height:130px}.musicalCard .mascotPhotos img:nth-child(3){grid-column:span 2;height:160px}}
+.musicalCard .mascotPhotos{position:absolute;top:calc(100% + 12px);right:auto;bottom:auto;left:50%;transform:translateX(-50%);width:min(920px,calc(100vw - 28px));grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:14px;background:#fff;border:1px solid #e8edf2;border-radius:24px;box-shadow:0 22px 50px #153b6830}
+.musicalCard .mascotPhotos img{height:clamp(180px,24vw,300px);border-radius:16px}
+.musicalCard .mascotPhotos img:first-child{object-position:70% center}
+.musicalCard .mascotPhotos img:nth-child(2){object-position:62% center}
+.musicalCard .mascotPhotos img:nth-child(3){object-position:center}
+@media(max-width:680px){.musicalCard .mascotPhotos{width:min(920px,calc(100vw - 20px));gap:7px;padding:8px;border-radius:17px}.musicalCard .mascotPhotos img{height:clamp(150px,38vw,230px);border-radius:11px}}
 
 .mascotCard:hover,.mascotCard:focus-within{z-index:4}
 .mascotPreview{position:static;margin-top:14px}
@@ -168,7 +171,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <section class="offer" id="oferta"><div class="wrap">
 <div class="head"><span class="tag">W naszej ofercie</span><h2>Małe atrakcje, wielkie WOW!</h2><p>Wybierz ulubione zabawy albo zdaj się na nas. Przygotujemy program dopasowany do dzieci i charakteru imprezy.</p></div>
 <div class="cards">
-<article class="card musicalCard"><details class="mascotPreview musicalPreview"><summary>Zobacz zdjęcia z występów</summary><div class="mascotPhotos"><img src="assets/wystep-elsa-impreza-plenerowa.png" alt="Elsa występuje dla dzieci podczas plenerowego wydarzenia" loading="lazy" decoding="async"><img src="assets/zabawa-sztucznym-sniegiem-elsa.png" alt="Dzieci bawią się w sztucznym śniegu z animatorkami w strojach Elsy i Anny" loading="lazy" decoding="async"><img src="assets/koncert-elsa-anna-dzieci.png" alt="Elsa i Anna występują na scenie przed grupą dzieci" loading="lazy" decoding="async"></div></details><div class="ico">🎶</div><h3>Muzyczne atrakcje i występy</h3><p>Bajkowe koncerty i występy dla dzieci, wspólne śpiewanie oraz spotkanie z Elsą i Anną przy sztucznym śniegu.</p></article>
+<article class="card musicalCard"><div class="ico">🎶</div><h3>Muzyczne atrakcje i występy</h3><p>Bajkowe koncerty i występy dla dzieci, wspólne śpiewanie oraz spotkanie z Elsą i Anną przy sztucznym śniegu.</p><details class="mascotPreview musicalPreview"><summary>Zobacz zdjęcia z występów</summary><div class="mascotPhotos"><img src="assets/wystep-elsa-impreza-plenerowa.png" alt="Elsa występuje dla dzieci podczas plenerowego wydarzenia" loading="lazy" decoding="async"><img src="assets/zabawa-sztucznym-sniegiem-elsa.png" alt="Dzieci bawią się w sztucznym śniegu z animatorkami w strojach Elsy i Anny" loading="lazy" decoding="async"><img src="assets/koncert-elsa-anna-dzieci.png" alt="Elsa i Anna występują na scenie przed grupą dzieci" loading="lazy" decoding="async"></div></details></article>
 <article class="card"><div class="ico">🫧</div><h3>Magiczne bańki mydlane</h3><p>Wielkie bańki, bańkowe czary i wyjątkowa atrakcja, czyli zamykanie w bańce.</p></article>
 <article class="card"><div class="ico">🎨</div><h3>Kolorowe przemiany</h3><p>Malowanie twarzy, brokatowe tatuaże i kolorowe warkoczyki, które dodają imprezie bajkowych kolorów.</p></article>
 <article class="card"><div class="ico">🎈</div><h3>Balonowe kształty</h3><p>Modelowanie balonów to mały upominek i wielka radość dla każdego dziecka.</p></article>
