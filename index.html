@@ -237,6 +237,20 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje dla Dzieci</footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+const mascotCard=document.querySelector('.mascotCard');
+const mascotPreview=mascotCard?.querySelector('.mascotPreview');
+if(mascotCard&&mascotPreview){
+  mascotCard.addEventListener('pointerenter',event=>{
+    if(event.pointerType==='mouse'||event.pointerType==='pen')mascotPreview.open=true;
+  });
+  mascotCard.addEventListener('pointerleave',event=>{
+    if((event.pointerType==='mouse'||event.pointerType==='pen')&&!mascotCard.matches(':focus-within'))mascotPreview.open=false;
+  });
+  mascotCard.addEventListener('focusin',()=>mascotPreview.open=true);
+  mascotCard.addEventListener('focusout',event=>{
+    if(!mascotCard.contains(event.relatedTarget)&&!mascotCard.matches(':hover'))mascotPreview.open=false;
+  });
+}
 const reviewTrack=document.getElementById('reviewTrack');
 document.querySelectorAll('[data-review-direction]').forEach(button=>{
   button.addEventListener('click',()=>{
