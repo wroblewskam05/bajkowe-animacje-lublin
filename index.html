@@ -113,6 +113,8 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .specialPhotos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .specialPhotos img{display:block;width:100%;height:320px;object-fit:cover;border-radius:20px;box-shadow:0 10px 24px #153b6818}
 .specialPhotos img:first-child{object-position:center 23%}
+.specialPhotos img:nth-child(3){grid-column:1/-1;height:460px;object-fit:contain;object-position:center;background:#102b73}
+@media(max-width:680px){.specialPhotos img:nth-child(3){height:min(105vw,440px)}}
 @media(max-width:680px){.specialGrid{grid-template-columns:1fr;gap:22px}.specialPhotos img{height:250px}.specialPhotos img:first-child{height:280px}}
 .colorfulCard{overflow:visible;z-index:1}
 .colorfulCard:hover,.colorfulCard:focus-within,.colorfulCard.showPhotos{z-index:4}
@@ -222,6 +224,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 </div><div class="specialPhotos">
 <img src="assets/IMG_9850-andrzejki.jpeg" alt="Dziewczynka uczestniczy w świetlnej zabawie andrzejkowej z efektem mgły" loading="lazy" decoding="async">
 <img src="assets/zabawa-papierowa-dzieci-01.jpg" alt="Dzieci bawią się papierowymi serpentynami podczas imprezy" loading="lazy" decoding="async">
+<img src="assets/andrzejki-niebieskie-swiatla.png" alt="Dzieci bawią się na andrzejkowej dyskotece w niebieskim świetle" loading="lazy" decoding="async">
 </div></div></div></section>
 <section class="gallery" id="galeria"><div class="wrap">
 <div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy. Zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
