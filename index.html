@@ -114,6 +114,13 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .specialPhotos img{display:block;width:100%;height:320px;object-fit:cover;border-radius:20px;box-shadow:0 10px 24px #153b6818}
 .specialPhotos img:first-child{object-position:center 23%}
 @media(max-width:680px){.specialGrid{grid-template-columns:1fr;gap:22px}.specialPhotos img{height:250px}.specialPhotos img:first-child{height:280px}}
+.weddingCard{overflow:visible;z-index:1}
+.weddingCard:hover,.weddingCard:focus-within,.weddingCard.showPhotos{z-index:4}
+.weddingCard .mascotPhotos{left:50%;right:auto;transform:translateX(-50%);width:min(700px,calc(100vw - 28px));grid-template-columns:repeat(2,minmax(0,1fr))}
+.weddingCard .mascotPhotos img{height:clamp(200px,27vw,310px)}
+.weddingCard .mascotPhotos img:first-child{object-position:center 42%}
+.weddingCard .mascotPhotos img:nth-child(2){object-position:center 48%}
+@media(max-width:680px){.weddingCard .mascotPhotos{width:min(700px,calc(100vw - 24px));gap:8px;padding:9px}.weddingCard .mascotPhotos img{height:clamp(165px,42vw,240px)}}
 .bubbleCard{overflow:visible;z-index:1}
 .bubbleCard:hover,.bubbleCard:focus-within,.bubbleCard.showPhotos{z-index:4}
 .bubbleCard .mascotPhotos{left:50%;right:auto;transform:translateX(-50%);width:min(780px,calc(100vw - 28px));grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -189,7 +196,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <article class="card musicalCard"><div class="ico">🎶</div><h3>Muzyczne atrakcje i występy</h3><p>Bajkowe koncerty i występy dla dzieci, wspólne śpiewanie oraz spotkanie z Elsą i Anną przy sztucznym śniegu.</p><details class="mascotPreview musicalPreview"><summary>Zobacz zdjęcia z występów</summary><div class="mascotPhotos"><img src="assets/zabawa-sztucznym-sniegiem-elsa.png" alt="Dzieci bawią się w sztucznym śniegu z animatorkami w strojach Elsy i Anny" loading="lazy" decoding="async"><img src="assets/koncert-elsa-anna-dzieci.png" alt="Elsa i Anna występują na scenie przed grupą dzieci" loading="lazy" decoding="async"></div></details></article>
 <article class="card bubbleCard"><div class="ico">🫧</div><h3>Magiczne bańki mydlane</h3><p>Wielkie bańki, bańkowe czary i wyjątkowa atrakcja, czyli zamykanie w bańce.</p><details class="mascotPreview bubblePreview"><summary>Zobacz zdjęcia baniek</summary><div class="mascotPhotos"><img src="assets/piana-na-imprezie-plenerowej.png" alt="Dzieci bawią się w pianie podczas plenerowej imprezy" loading="lazy" decoding="async"><img src="assets/wielkie-banki-mydlane-plener.png" alt="Animatorka tworzy wielką bańkę mydlaną na plenerowej imprezie" loading="lazy" decoding="async"><img src="assets/zamykanie-w-bance-mydlanej.png" alt="Dziecko stoi wewnątrz wielkiej bańki mydlanej podczas animacji" loading="lazy" decoding="async"></div></details></article>
 <article class="card"><div class="ico">🎨</div><h3>Kolorowe przemiany</h3><p>Malowanie twarzy, brokatowe tatuaże i kolorowe warkoczyki, które dodają imprezie bajkowych kolorów.</p></article>
-<article class="card"><div class="ico">🎈</div><h3>Balonowe kształty</h3><p>Modelowanie balonów to mały upominek i wielka radość dla każdego dziecka.</p></article>
+<article class="card weddingCard"><div class="ico">💍</div><h3>Wspomnienia na długie lata</h3><p>Animacje na weselu, które zajmą dzieci atrakcjami, a gościom zapewnią chwilę swobodnej zabawy.</p><details class="mascotPreview weddingPreview"><summary>Zobacz zdjęcia animacji weselnych</summary><div class="mascotPhotos"><img src="assets/animacje-weselne-wspolne-zdjecie.png" alt="Para młoda i goście podczas animacji weselnych" loading="lazy" decoding="async"><img src="assets/animacje-weselne-piana.png" alt="Dzieci bawią się w pianie podczas wesela" loading="lazy" decoding="async"></div></details></article>
 <article class="card sweetCard"><div class="ico">🍫</div><h3>Słodkie atrakcje</h3><p>Fontanna czekoladowa, popcorn i wata cukrowa urozmaicą przyjęcie i sprawią dzieciom mnóstwo radości.</p><details class="mascotPreview sweetPreview"><summary>Zobacz zdjęcia słodkich atrakcji</summary><div class="mascotPhotos"><img src="assets/wata-cukrowa-na-zywo.png" alt="Animatorka przygotowuje niebieską watę cukrową" loading="lazy" decoding="async"><img src="assets/stoisko-popcorn-wata-cukrowa.png" alt="Stoisko z popcornem i watą cukrową podczas wydarzenia" loading="lazy" decoding="async"></div></details></article>
 <article class="card mascotCard"><div class="ico">🐻</div><h3>Żywe maskotki</h3><p>Animatorzy w przebraniach maskotek, w tym Miś z bajki „Masza i Niedźwiedź”. To mnóstwo zdjęć, przytulasów i wspólnej zabawy.</p><details class="mascotPreview"><summary>Zobacz zdjęcia maskotek</summary><div class="mascotPhotos"><img src="assets/maskotka-myszka-dzieci.png" alt="Myszka w czerwonej sukience wita dzieci" loading="lazy" decoding="async"><img src="assets/maskotka-mis-grupa.png" alt="Duży pluszowy miś pozuje do zdjęcia z grupą dzieci i dorosłych" loading="lazy" decoding="async"><img src="assets/maskotka-postac-plener.png" alt="Duża bajkowa maskotka pozuje z dzieckiem podczas wydarzenia plenerowego" loading="lazy" decoding="async"></div></details></article>
 </div></div></section>
@@ -276,6 +283,21 @@ const sweetCard=document.querySelector('.sweetCard');
 const sweetPreview=sweetCard?.querySelector('.sweetPreview');
 const bubbleCard=document.querySelector('.bubbleCard');
 const bubblePreview=bubbleCard?.querySelector('.bubblePreview');
+const weddingCard=document.querySelector('.weddingCard');
+const weddingPreview=weddingCard?.querySelector('.weddingPreview');
+weddingPreview?.addEventListener('toggle',()=>weddingCard.classList.toggle('showPhotos',weddingPreview.open));
+if(weddingCard&&weddingPreview){
+  weddingCard.addEventListener('pointerenter',event=>{
+    if(event.pointerType==='mouse'||event.pointerType==='pen')weddingPreview.open=true;
+  });
+  weddingCard.addEventListener('pointerleave',event=>{
+    if((event.pointerType==='mouse'||event.pointerType==='pen')&&!weddingCard.matches(':focus-within'))weddingPreview.open=false;
+  });
+  weddingCard.addEventListener('focusin',()=>weddingPreview.open=true);
+  weddingCard.addEventListener('focusout',event=>{
+    if(!weddingCard.contains(event.relatedTarget)&&!weddingCard.matches(':hover'))weddingPreview.open=false;
+  });
+}
 bubblePreview?.addEventListener('toggle',()=>bubbleCard.classList.toggle('showPhotos',bubblePreview.open));
 if(bubbleCard&&bubblePreview){
   bubbleCard.addEventListener('pointerenter',event=>{
