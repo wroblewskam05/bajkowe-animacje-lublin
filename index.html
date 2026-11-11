@@ -104,6 +104,21 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .reviewAuthor{margin-top:auto;padding-top:13px;border-top:1px solid #edf0f3;color:var(--navy);font-weight:850}
 @media(max-width:680px){.reviewControls{margin:-18px 0 10px}.reviewCard{flex-basis:86vw;padding:20px}.reviewCard blockquote{font-size:14px}}
 
+.workshops{background:linear-gradient(135deg,#fff8ef,#f2faff)}
+.workshopGrid{display:grid;grid-template-columns:1.1fr .8fr;gap:32px;align-items:start}
+.workshopCopy{padding:26px;border:1px solid #e8edf2;border-radius:24px;background:#fff;box-shadow:0 12px 30px #153b6810}
+.workshopCopy h3{margin:0 0 12px;color:var(--navy);font-size:23px;line-height:1.25}
+.workshopCopy p,.workshopCopy li{color:#526b80;line-height:1.7}
+.workshopCopy p{margin:0}
+.workshopCopy ul{margin:14px 0 0;padding-left:21px}
+.workshopPoster{width:min(100%,430px);margin:0 auto;padding:14px;border:1px solid #f1e5c9;border-radius:22px;background:#fff;box-shadow:0 16px 38px #153b6817;text-align:center}
+.workshopPoster>a:first-child{display:block}
+.workshopPoster img{display:block;width:100%;height:auto;border-radius:12px}
+.workshopPoster .btn{margin:14px 0 2px}
+.workshopPhotos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.workshopPhotos img{display:block;width:100%;height:240px;object-fit:cover;object-position:center 48%;border-radius:18px;box-shadow:0 8px 20px #153b6815}
+@media(max-width:850px){.workshopGrid{grid-template-columns:1fr}.workshopPoster{max-width:390px}}
+@media(max-width:680px){.workshopCopy{padding:21px}.workshopCopy h3{font-size:20px}.workshopPhotos{gap:8px}.workshopPhotos img{height:175px;border-radius:13px}.workshopPoster{max-width:360px}}
 .special{background:linear-gradient(135deg,#fff8ef,#f2faff)}
 .specialGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}
 .specialList{display:grid;gap:12px}
@@ -183,7 +198,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 
 <header class="nav"><div class="wrap navin">
 <a class="logo" href="#start"><img class="brand-mark" src="assets/logo.jpg?v=3" alt=""><span class="brand-name">BAJKOWE<br><b>ANIMACJE</b></span></a>
-<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#imprezy">Bale i dyskoteki</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
+<nav aria-label="Nawigacja główna"><a href="#oferta">Atrakcje</a><a href="#okazje">Okazje</a><a href="#imprezy">Bale i dyskoteki</a><a href="#warsztaty">Warsztaty</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn navCta" href="#kontakt">Zapytaj o termin <span>→</span></a>
 </div></header>
 <main>
@@ -226,6 +241,25 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <img src="assets/zabawa-papierowa-dzieci-01.jpg" alt="Dzieci bawią się papierowymi serpentynami podczas imprezy" loading="lazy" decoding="async">
 <img src="assets/andrzejki-niebieskie-swiatla.png" alt="Dzieci bawią się na andrzejkowej dyskotece w niebieskim świetle" loading="lazy" decoding="async">
 </div></div></div></section>
+<section class="workshops" id="warsztaty"><div class="wrap">
+<div class="head"><span class="tag">Kreatywnie, muzycznie i w ruchu</span><h2>Warsztaty dla dzieci</h2><p>Twórcze spotkania, które łączą dobrą zabawę z rozwojem i wspólnym działaniem.</p></div>
+<div class="workshopGrid">
+<div class="workshopCopy">
+<h3>Fizjo-nutki, ruch i muzyka dla zdrowego rozwoju</h3>
+<p>Zajęcia ruchowe dla dzieci w wieku 3–6 lat. W rytmie muzyki wspieramy prawidłowe nawyki postawy, koordynację i koncentrację.</p>
+<ul><li>30 minut raz w tygodniu</li><li>15 zł za zajęcia</li><li>Zapisy pod numerem 502 377 089</li></ul>
+<div class="workshopPhotos">
+<img src="assets/warsztaty-dzieci-wstazki.jpg" alt="Dzieci wspólnie wykonują kreatywne zadanie podczas warsztatów" loading="lazy" decoding="async">
+<img src="assets/warsztaty-dzieci-dekorowanie-piernikow.jpg" alt="Dzieci dekorują pierniczki podczas świątecznych warsztatów" loading="lazy" decoding="async">
+</div>
+</div>
+<div class="workshopPoster">
+<a href="assets/fizjo-nutki-plakat.pdf" target="_blank" rel="noopener" aria-label="Otwórz plakat Fizjo-nutki w nowej karcie">
+<img src="assets/fizjo-nutki-plakat.png" alt="Plakat Fizjo-nutki: zajęcia ruchowe dla dzieci w wieku 3–6 lat, raz w tygodniu, 30 minut, 15 zł za zajęcia" loading="lazy" decoding="async">
+</a>
+<a class="btn blue" href="assets/fizjo-nutki-plakat.pdf" target="_blank" rel="noopener">Otwórz plakat <span>↗</span></a>
+</div>
+</div></div></section>
 <section class="gallery" id="galeria"><div class="wrap">
 <div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy. Zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
 <div class="galleryGrid">
