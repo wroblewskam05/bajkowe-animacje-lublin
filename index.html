@@ -253,6 +253,18 @@ const mascotPreview=mascotCard?.querySelector('.mascotPreview');
 const musicalCard=document.querySelector('.musicalCard');
 const musicalPreview=musicalCard?.querySelector('.musicalPreview');
 musicalPreview?.addEventListener('toggle',()=>musicalCard.classList.toggle('showPhotos',musicalPreview.open));
+if(musicalCard&&musicalPreview){
+  musicalCard.addEventListener('pointerenter',event=>{
+    if(event.pointerType==='mouse'||event.pointerType==='pen')musicalPreview.open=true;
+  });
+  musicalCard.addEventListener('pointerleave',event=>{
+    if((event.pointerType==='mouse'||event.pointerType==='pen')&&!musicalCard.matches(':focus-within'))musicalPreview.open=false;
+  });
+  musicalCard.addEventListener('focusin',()=>musicalPreview.open=true);
+  musicalCard.addEventListener('focusout',event=>{
+    if(!musicalCard.contains(event.relatedTarget)&&!musicalCard.matches(':hover'))musicalPreview.open=false;
+  });
+}
 if(mascotCard&&mascotPreview){
   mascotCard.addEventListener('pointerenter',event=>{
     if(event.pointerType==='mouse'||event.pointerType==='pen')mascotPreview.open=true;
