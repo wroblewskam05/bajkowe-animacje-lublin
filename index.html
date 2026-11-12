@@ -112,14 +112,14 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .workshopCopy p,.workshopCopy li{color:#526b80;line-height:1.7}
 .workshopCopy p{margin:0}
 .workshopCopy ul{margin:14px 0 0;padding-left:21px}
-.workshopPoster{width:min(100%,430px);margin:0 auto;padding:14px;border:1px solid #f1e5c9;border-radius:22px;background:#fff;box-shadow:0 16px 38px #153b6817;text-align:center}
-.workshopPoster>a:first-child{display:block}
+.workshopPoster{width:100%;margin:20px 0 0;padding:14px;border:1px solid #f1e5c9;border-radius:22px;background:#fff;box-shadow:0 16px 38px #153b6817;text-align:center}
+.fizjoFlyerPages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}.fizjoFlyerPages a{display:block;min-width:0}
 .workshopPoster img{display:block;width:100%;height:auto;border-radius:12px}
 .workshopPoster .btn{margin:14px 0 2px}
 .workshopPhotos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
 .workshopPhotos img{display:block;width:100%;height:240px;object-fit:cover;object-position:center 48%;border-radius:18px;box-shadow:0 8px 20px #153b6815}
-@media(max-width:850px){.workshopGrid{grid-template-columns:1fr}.workshopPoster{max-width:390px}}
-@media(max-width:680px){.workshopCopy{padding:21px}.workshopCopy h3{font-size:20px}.workshopPhotos{gap:8px}.workshopPhotos img{height:175px;border-radius:13px}.workshopPoster{max-width:360px}}
+@media(max-width:850px){.workshopGrid{grid-template-columns:1fr}.workshopPoster{max-width:none}}
+@media(max-width:680px){.workshopCopy{padding:21px}.fizjoFlyerPages{gap:8px}.workshopCopy h3{font-size:20px}.workshopPhotos{gap:8px}.workshopPhotos img{height:175px;border-radius:13px}.workshopPoster{max-width:360px}}
 .special{background:linear-gradient(135deg,#fff8ef,#f2faff)}
 .specialGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:30px;align-items:center}
 .specialList{display:grid;gap:12px}
@@ -249,16 +249,14 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <h3>Warsztaty dla żłobków, przedszkoli i szkół</h3>
 <p>W żłobkach, przedszkolach i szkołach możemy prowadzić warsztaty sensoryczne, przedstawienia tematyczne oraz zajęcia Fizjo-nutki.</p>
 <ul><li>Zapisy pod numerem 502 377 089</li></ul>
+<div class="workshopPoster">
+<div class="fizjoFlyerPages"><a href="assets/fizjo-nutki-strona-1.jpg" target="_blank" rel="noopener"><img src="assets/fizjo-nutki-strona-1.jpg" alt="Pierwsza strona ulotki Fizjo-nutki" loading="lazy" decoding="async"></a><a href="assets/fizjo-nutki-strona-2.jpg" target="_blank" rel="noopener"><img src="assets/fizjo-nutki-strona-2.jpg" alt="Druga strona ulotki Fizjo-nutki" loading="lazy" decoding="async"></a></div>
+<a class="btn blue" href="assets/fizjo-nutki-plakat.pdf" target="_blank" rel="noopener">Otwórz ulotkę <span>↗</span></a>
+</div>
 <div class="workshopPhotos">
 <img src="assets/warsztaty-dzieci-wstazki.jpg" alt="Dzieci wspólnie wykonują kreatywne zadanie podczas warsztatów" loading="lazy" decoding="async">
 <img src="assets/warsztaty-dzieci-dekorowanie-piernikow.jpg" alt="Dzieci dekorują pierniczki podczas świątecznych warsztatów" loading="lazy" decoding="async">
 </div>
-</div>
-<div class="workshopPoster">
-<a href="assets/fizjo-nutki-plakat.pdf" target="_blank" rel="noopener" aria-label="Otwórz plakat Fizjo-nutki w nowej karcie">
-<div class="fizjoFlyerPages"><a href="assets/fizjo-nutki-strona-1.jpg" target="_blank" rel="noopener"><img src="assets/fizjo-nutki-strona-1.jpg" alt="Pierwsza strona ulotki Fizjo-nutki" loading="lazy" decoding="async"></a><a href="assets/fizjo-nutki-strona-2.jpg" target="_blank" rel="noopener"><img src="assets/fizjo-nutki-strona-2.jpg" alt="Druga strona ulotki Fizjo-nutki" loading="lazy" decoding="async"></a></div>
-</a>
-<a class="btn blue" href="assets/fizjo-nutki-plakat.pdf" target="_blank" rel="noopener">Otwórz plakat <span>↗</span></a>
 </div>
 </div></div></section>
 <section class="gallery" id="galeria"><div class="wrap">
