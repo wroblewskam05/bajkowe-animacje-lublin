@@ -264,6 +264,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <section class="gallery" id="galeria"><div class="wrap">
 <div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy. Zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
 <div class="galleryGrid">
+<div class="tile"><img src="assets/galeria-pokaz-banki.jpg" alt="Pokaz wielkiej bańki mydlanej podczas przyjęcia" loading="eager" fetchpriority="high" decoding="async"></div>
 <div class="tile"><img src="assets/malowanie-twarzy-animatorka-01.jpg" alt="Animatorka maluje twarz dziecka podczas plenerowej imprezy" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/spotkanie-mikolajkowe-animacje-01.jpg" alt="Dzieci spotykają się ze Świętym Mikołajem podczas wydarzenia" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-04.jpg?v=3" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div>
@@ -277,7 +278,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="tile"><img src="assets/mikolajki-zabawy-tasiemki-01.jpg" alt="Dzieci tańczą i bawią się kolorowymi wstążkami" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/malowanie-twarzy-zabawy-01.jpg" alt="Dziecko z pomalowaną buzią podczas zabawy z bańkami" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-zabawy-papier-01.jpg" alt="Dzieci uczestniczą w ruchowej zabawie z papierowymi skrawkami" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-pokaz-banki.jpg" alt="Pokaz wielkiej bańki mydlanej podczas przyjęcia" loading="lazy" decoding="async"></div>
+
 <div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-02.jpg?v=3" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Zabawa z pianą i animacje dla dzieci" loading="lazy" decoding="async"></div>
@@ -330,6 +331,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje dla Dzieci</footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('.galleryGrid .tile img').forEach((img)=>img.addEventListener('error',()=>img.closest('.tile')?.remove(),{once:true}));
 const mascotCard=document.querySelector('.mascotCard');
 const mascotPreview=mascotCard?.querySelector('.mascotPreview');
 const musicalCard=document.querySelector('.musicalCard');
