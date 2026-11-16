@@ -73,6 +73,7 @@ section{padding:82px 0}
 .gallery{background:var(--cream)}
 .galleryGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,16vw,210px);grid-auto-flow:dense;gap:14px}
 .tile{position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#b8eaff,#f8c6df);box-shadow:0 10px 24px #153b6814}
+.tile.image-fallback{background:#edf3fa url("assets/galeria-chusta-zabawa.jpg") center 52%/cover no-repeat}
 .tile:nth-child(9n + 1){grid-column:span 2;grid-row:span 2}
 .tile:nth-child(9n + 5){grid-column:span 2}
 .tile:nth-child(13n + 8){grid-row:span 2}
@@ -268,6 +269,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="tile"><img src="assets/malowanie-twarzy-animatorka-01.jpg" alt="Animatorka maluje twarz dziecka podczas plenerowej imprezy" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/spotkanie-mikolajkowe-animacje-01.jpg" alt="Dzieci spotykają się ze Świętym Mikołajem podczas wydarzenia" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-04.jpg?v=3" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-chusta-zabawa.jpg" alt="Dzieci bawią się kolorową chustą animacyjną na świeżym powietrzu" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-pokaz-ognia.jpg" alt="Pokaz ognia podczas wieczornych animacji dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-grupa-dzieci-01.jpg" alt="Wspólne zdjęcie dzieci i animatorów podczas Mikołajek" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-06.jpg?v=3" alt="Zabawy dla dzieci podczas wesela" loading="lazy" decoding="async"></div>
@@ -278,7 +280,6 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <div class="tile"><img src="assets/mikolajki-zabawy-tasiemki-01.jpg" alt="Dzieci tańczą i bawią się kolorowymi wstążkami" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/malowanie-twarzy-zabawy-01.jpg" alt="Dziecko z pomalowaną buzią podczas zabawy z bańkami" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-zabawy-papier-01.jpg" alt="Dzieci uczestniczą w ruchowej zabawie z papierowymi skrawkami" loading="lazy" decoding="async"></div>
-
 <div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-02.jpg?v=3" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Zabawa z pianą i animacje dla dzieci" loading="lazy" decoding="async"></div>
@@ -331,7 +332,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <footer>BAJKOWE ANIMACJE ✨<br>Lublin i okolice · <a href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr">Facebook</a><br>© <span id="year"></span> Bajkowe Animacje dla Dzieci</footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('.galleryGrid .tile img').forEach((img)=>img.addEventListener('error',()=>img.closest('.tile')?.remove(),{once:true}));
+document.querySelectorAll('.galleryGrid .tile').forEach((tile)=>{const img=tile.querySelector('img');if(!img||(img.complete&&!img.naturalWidth)){tile.classList.add('image-fallback');return;}img.addEventListener('error',()=>tile.classList.add('image-fallback'),{once:true});});
 const mascotCard=document.querySelector('.mascotCard');
 const mascotPreview=mascotCard?.querySelector('.mascotPreview');
 const musicalCard=document.querySelector('.musicalCard');
