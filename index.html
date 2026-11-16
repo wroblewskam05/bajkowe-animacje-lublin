@@ -195,6 +195,17 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 @media(max-width:850px){nav{gap:14px}.navin{gap:12px}.heroGrid{gap:28px}.photo{height:360px}.occasionGrid{gap:28px}}
 @media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:nth-child(10n + 1){grid-column:span 2;grid-row:span 2}.tile:nth-child(10n + 5){grid-column:span 2;grid-row:span 1}.tile:nth-child(10n + 8){grid-column:span 1;grid-row:span 2}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
 @media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:0}.navCta{padding:10px 12px}.brand-mark{width:49px;height:49px}.logo{font-size:14px}}
+
+.team{background:linear-gradient(135deg,#f1faff 0%,#fff7f0 100%)}
+.teamGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:center}
+.teamPhoto{margin:0;overflow:hidden;border:1px solid #e5edf2;border-radius:28px;background:#fff;box-shadow:0 16px 38px #153b6818}
+.teamPhoto img{display:block;width:100%;height:360px;object-fit:cover;object-position:center 48%}
+.teamCopy h2{margin:12px 0 14px;color:var(--navy);font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-.7px}
+.teamCopy p{margin:0;color:#526b80;line-height:1.8}
+.teamPoints{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.teamPoints span{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #e6edf3;border-radius:999px;background:#fff;color:var(--navy);font-weight:800;font-size:14px}
+@media(max-width:850px){.teamGrid{grid-template-columns:1fr;gap:24px}.teamPhoto{order:2}.teamPhoto img{height:auto;max-height:420px}.teamCopy{text-align:center}.teamPoints{justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -324,6 +335,11 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <article class="reviewCard"><div class="reviewMeta"><span class="reviewStars" aria-label="5 na 5 gwiazdek">★★★★★</span><span class="reviewSource">Google</span></div><blockquote>„Serdecznie polecam! Profesjonalne podejście do dzieci, dobrze zorganizowany czas podczas imprezy. Ciekawe gry i zabawy dla dzieci. Dzieci zachwycone za każdym razem po animacjach! 🤗🤗🤗”</blockquote><div class="reviewAuthor">Olga Ciesielka</div></article>
 </div></div></section>
 
+
+<section class="team" id="zespol"><div class="wrap teamGrid">
+<figure class="teamPhoto"><img src="assets/zespol-bajkowe-animacje.jpg" alt="Zespół Bajkowych Animacji podczas wspólnego wydarzenia" loading="lazy" decoding="async"></figure>
+<div class="teamCopy"><span class="tag">Doświadczenie i serce do pracy</span><h2>Wykwalifikowany zespół, któremu możesz zaufać</h2><p>Nasza szefowa ma wieloletnie doświadczenie jako pedagog i nauczycielka. W naszym zespole są także pedagodzy oraz osoby z pasją i sercem do pracy z dziećmi. Dzięki temu łączymy dobrą zabawę z uważnym i odpowiedzialnym podejściem do każdego dziecka.</p><div class="teamPoints"><span>📚 Doświadczenie pedagogiczne</span><span>💛 Ciepłe podejście do dzieci</span></div></div>
+</div></section>
 <section class="contact" id="kontakt"><div class="wrap contactBox">
 <div><span class="tag">Zaplanujmy coś wyjątkowego</span><h2>Zapytaj o wolny termin!</h2><p>Napisz do nas w wiadomości prywatnej, a pomożemy dobrać atrakcje do Twojej imprezy.<br><b>Telefon:</b> <a href="tel:+48502377089">502 377 089</a><br><b>E-mail:</b> <a href="mailto:bajkoweanimacjelublin@gmail.com">bajkoweanimacjelublin@gmail.com</a></p></div>
 <div class="heroActions"><a class="btn" href="https://www.facebook.com/share/19kynZXjj6/?mibextid=wwXIfr" target="_blank" rel="noopener">Napisz wiadomość <span>💌</span></a><a class="btn blue" href="tel:+48502377089">Zadzwoń <span>☎️</span></a></div>
