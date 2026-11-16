@@ -71,10 +71,11 @@ section{padding:82px 0}
 .chips span{display:flex;gap:11px;align-items:center;background:#ffffff18;border:1px solid #ffffff35;padding:16px;border-radius:16px;font-weight:780;backdrop-filter:blur(4px)}
 .chips b{font-size:23px}
 .gallery{background:var(--cream)}
-.galleryGrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+.galleryGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,16vw,210px);grid-auto-flow:dense;gap:14px}
 .tile{position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#b8eaff,#f8c6df);box-shadow:0 10px 24px #153b6814}
-.tile:first-child{grid-column:span 2;grid-row:span 2}
-.tile:nth-child(5){grid-column:span 2}
+.tile:nth-child(9n + 1){grid-column:span 2;grid-row:span 2}
+.tile:nth-child(9n + 5){grid-column:span 2}
+.tile:nth-child(13n + 8){grid-row:span 2}
 .tile img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
 .tile:hover img{transform:scale(1.045)}
 .promise{background:#fff}
@@ -191,7 +192,7 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 .hero:after{animation:soft-float 5.8s ease-in-out infinite reverse}
 @media(prefers-reduced-motion:reduce){.reveal,.reveal.is-visible{opacity:1;transform:none;transition:none}.floatNote,.hero:before,.hero:after{animation:none!important}html,.reviewTrack{scroll-behavior:auto!important}}
 @media(max-width:850px){nav{gap:14px}.navin{gap:12px}.heroGrid{gap:28px}.photo{height:360px}.occasionGrid{gap:28px}}
-@media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:first-child{grid-column:span 2;grid-row:span 2}.tile:nth-child(5){grid-column:span 1}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
+@media(max-width:680px){.wrap{width:min(100% - 30px,560px)}.navin{min-height:76px}.brand-mark{width:54px;height:54px;border-radius:15px}.logo{font-size:15px;gap:8px}.navCta{padding:11px 14px;font-size:13px}nav{display:none}.hero{padding:43px 0 55px}.heroGrid,.occasionGrid{grid-template-columns:1fr;gap:30px}h1{font-size:clamp(40px,11vw,58px);letter-spacing:-2px}.lead{font-size:16px}.heroVisual{margin:0 8px}.photo{height:300px}.noteTop{left:-7px;top:14px}.noteBottom{right:-5px}.heroNote{font-size:12px;flex-wrap:wrap}.heroActions .btn{flex:1}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px;min-height:190px}.card h3{font-size:16px}.card p{font-size:13px}.ico{width:47px;height:47px;font-size:25px;border-radius:15px}section{padding:62px 0}.occasions:after{font-size:75px;right:0}.chips{gap:9px}.chips span{font-size:13px;padding:13px 11px;gap:7px}.chips b{font-size:19px}.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:145px;gap:10px}.tile{border-radius:16px}.tile:nth-child(9n + 1){grid-column:span 2;grid-row:span 2}.tile:nth-child(9n + 5){grid-column:span 1}.tile:nth-child(13n + 8){grid-row:span 1}.contact{padding-top:5px}.contactBox{padding:28px 22px;border-radius:25px}.contactBox .actions{width:100%}.contactBox .btn{flex:1}}
 @media(max-width:390px){.cards{grid-template-columns:1fr}.card{min-height:0}.navCta{padding:10px 12px}.brand-mark{width:49px;height:49px}.logo{font-size:14px}}
 </style>
 </head>
@@ -263,37 +264,41 @@ footer{background:#10365f;color:#dceeff;padding:32px 0;text-align:center;line-he
 <section class="gallery" id="galeria"><div class="wrap">
 <div class="head"><span class="tag">Zajrzyj do naszej galerii</span><h2>Tak wyglądają bajkowe chwile</h2><p>Bańki, zabawy i uśmiechy. Zobacz, jak wspólnie zamieniamy zwykłe chwile w magiczne wspomnienia.</p></div>
 <div class="galleryGrid">
-<div class="tile"><img src="assets/galeria-01.jpg?v=3" alt="Dzieci bawią się bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-02.jpg?v=3" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-03.jpg?v=3" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-04.jpg?v=3" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-05.jpg?v=3" alt="Animacje i bańki mydlane podczas rodzinnej uroczystości" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-06.jpg?v=3" alt="Zabawy dla dzieci podczas wesela" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-07.jpg?v=3" alt="Pokaz ogromnych baniek mydlanych dla dzieci" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-09.jpg?v=3" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Zabawa z pianą i animacje dla dzieci" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/animacje-plenerowe-banki-01.jpg" alt="Dzieci bawią się wielkimi bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/zabawy-ruchowe-tunel-01.jpg" alt="Dziecko przechodzi przez kolorowy tunel animacyjny" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/malowanie-twarzy-animatorka-01.jpg" alt="Animatorka maluje twarz dziecka podczas plenerowej imprezy" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/atrakcje-plenerowe-popcorn-01.jpg" alt="Stanowisko z popcornem podczas rodzinnego wydarzenia plenerowego" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/zabawy-chusta-animacyjna-01.jpg" alt="Dzieci uczestniczą we wspólnej zabawie z kolorową chustą animacyjną" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/animacje-piana-plener-01.jpg" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/malowanie-twarzy-zabawy-01.jpg" alt="Dziecko z pomalowaną buzią podczas zabawy z bańkami" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/maskotka-mis-zabawa-grupa.png" alt="Dzieci przytulają dużą pluszową maskotkę misia podczas zabawy" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/galeria-balony-taniec.jpg" alt="Dziewczynka z twarzą pomalowaną w bajkowy wzór i brokatowymi zdobieniami" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/kolorowe-przemiany-warkoczyki.jpg" alt="Dzieci z kolorowymi warkoczykami i pomalowanymi włosami" loading="lazy" decoding="async"></div>
-
 <div class="tile"><img src="assets/spotkanie-mikolajkowe-animacje-01.jpg" alt="Dzieci spotykają się ze Świętym Mikołajem podczas wydarzenia" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/zabawa-papierowa-dzieci-01.jpg" alt="Dzieci bawią się papierowymi serpentynami podczas imprezy" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/mikolajki-zabawa-dzieci-01.jpg" alt="Animatorka i Święty Mikołaj prowadzą zabawę dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-04.jpg?v=3" alt="Plenerowa impreza dla dzieci z pokazem baniek mydlanych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-pokaz-ognia.jpg" alt="Pokaz ognia podczas wieczornych animacji dla dzieci" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-grupa-dzieci-01.jpg" alt="Wspólne zdjęcie dzieci i animatorów podczas Mikołajek" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/mikolajki-zabawy-tasiemki-01.jpg" alt="Dzieci tańczą i bawią się kolorowymi wstążkami" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/mikolajki-zabawy-papier-01.jpg" alt="Dzieci uczestniczą w ruchowej zabawie z papierowymi skrawkami" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/mikolajki-spotkanie-z-mikolajem-01.jpg" alt="Święty Mikołaj spotyka się z dzieckiem podczas imprezy" loading="lazy" decoding="async"></div>
-<div class="tile"><img src="assets/mikolajki-wspolne-zabawy-01.jpg" alt="Dzieci uczestniczą w zabawie podczas spotkania z Mikołajem" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-06.jpg?v=3" alt="Zabawy dla dzieci podczas wesela" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-wreczenie-prezentu-01.jpg" alt="Animatorka w stroju Mikołajki wręcza dziecku prezent" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-03.jpg?v=3" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-piana-radosc.jpg" alt="Dzieci bawią się w pianie podczas animacji plenerowych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawa-dzieci-01.jpg" alt="Animatorka i Święty Mikołaj prowadzą zabawę dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawy-tasiemki-01.jpg" alt="Dzieci tańczą i bawią się kolorowymi wstążkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/malowanie-twarzy-zabawy-01.jpg" alt="Dziecko z pomalowaną buzią podczas zabawy z bańkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-zabawy-papier-01.jpg" alt="Dzieci uczestniczą w ruchowej zabawie z papierowymi skrawkami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-pokaz-banki.jpg" alt="Pokaz wielkiej bańki mydlanej podczas przyjęcia" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-08.jpg?v=3" alt="Kreatywne animacje dla dzieci podczas przyjęcia" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-02.jpg?v=3" alt="Zabawa z bańkami mydlanymi i kolorowymi atrakcjami dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-10.jpg?v=3" alt="Zabawa z pianą i animacje dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/maskotka-mis-zabawa-grupa.png" alt="Dzieci przytulają dużą pluszową maskotkę misia podczas zabawy" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-piana-plener.jpg" alt="Dzieci bawią się w pianie na świeżym powietrzu" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/zabawy-ruchowe-tunel-01.jpg" alt="Dziecko przechodzi przez kolorowy tunel animacyjny" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-wspolne-zabawy-01.jpg" alt="Dzieci uczestniczą w zabawie podczas spotkania z Mikołajem" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/mikolajki-spotkanie-z-mikolajem-01.jpg" alt="Święty Mikołaj spotyka się z dzieckiem podczas imprezy" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-balony-taniec.jpg" alt="Dziewczynka z twarzą pomalowaną w bajkowy wzór i brokatowymi zdobieniami" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-warsztaty-kreatywne.jpg" alt="Dzieci wspólnie tworzą kolorowe rysunki podczas warsztatów" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-07.jpg?v=3" alt="Pokaz ogromnych baniek mydlanych dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/atrakcje-plenerowe-popcorn-01.jpg" alt="Stanowisko z popcornem podczas rodzinnego wydarzenia plenerowego" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-09.jpg?v=3" alt="Zabawa na imprezie tematycznej dla dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/animacje-plenerowe-banki-01.jpg" alt="Dzieci bawią się wielkimi bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-zabawy-plenerowe.jpg" alt="Dzieci uczestniczą w plenerowych zabawach i warsztatach" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-01.jpg?v=3" alt="Dzieci bawią się bańkami mydlanymi podczas animacji plenerowych" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/zabawy-chusta-animacyjna-01.jpg" alt="Dzieci uczestniczą we wspólnej zabawie z kolorową chustą animacyjną" loading="lazy" decoding="async"></div>
 <div class="tile"><img src="assets/mikolajki-chusta-animacyjna-01.jpg" alt="Dzieci bawią się z animatorami przy kolorowej chuście" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/animacje-piana-plener-01.jpg" alt="Animatorka w stroju księżniczki prowadzi zabawę z pianą" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-prace-dzieci.jpg" alt="Kolorowe prace plastyczne wykonane przez dzieci" loading="lazy" decoding="async"></div>
+<div class="tile"><img src="assets/galeria-05.jpg?v=3" alt="Animacje i bańki mydlane podczas rodzinnej uroczystości" loading="lazy" decoding="async"></div>
 </div></div></section>
 
 <section class="reviews" id="opinie"><div class="wrap">
